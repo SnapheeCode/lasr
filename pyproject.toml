@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "auction-bot"
+version = "0.1.0"
+description = "Automation bot for Avtor24 auctions"
+authors = [{name = "AutoDev"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx[http2]~=0.27.0",
+    "pydantic~=2.6",
+    "PyYAML~=6.0",
+    "playwright~=1.41",
+    "tenacity~=8.2",
+]
+
+[project.scripts]
+avtor24-bot = "auction_bot.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
