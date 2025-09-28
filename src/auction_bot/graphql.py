@@ -10,9 +10,7 @@ import httpx
 from tenacity import AsyncRetrying, retry_if_exception_type, stop_after_attempt, wait_exponential
 
 LOGGER = logging.getLogger(__name__)
-
 API_URL = "https://avtor24.ru/graphqlapi"  # production GraphQL endpoint
-
 
 @dataclass
 class GraphQLResponse:
